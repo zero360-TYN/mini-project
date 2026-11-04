@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -6,5 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>mini_project</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="wwwroot\jsLib\" />
+  </ItemGroup>
 
 </Project>
