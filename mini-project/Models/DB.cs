@@ -1,5 +1,10 @@
-﻿namespace mini_project.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
-public class DB
+namespace mini_project.Models;
+
+#nullable disable warnings
+public class DB(DbContextOptions options) : DbContext(options)
 {
+    // DbSet
+    public DbSet<SampleEntity> SampleEntities { get; set; }
 }
