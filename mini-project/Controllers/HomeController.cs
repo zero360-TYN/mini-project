@@ -6,6 +6,11 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
+        var vm = new Home.SampleVM
+        {
+            code = 1,
+            value = "Hello World"
+        };
         return View();
     }
 }

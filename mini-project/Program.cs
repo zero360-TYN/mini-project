@@ -1,4 +1,7 @@
+//global using
 global using mini_project.Models;
+global using mini_project.ViewModels;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

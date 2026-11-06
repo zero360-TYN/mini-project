@@ -1,6 +1,5 @@
-﻿namespace mini_project.Models;
-
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+namespace mini_project.Models;
 public class SampleEntity
 {
     [Key]
