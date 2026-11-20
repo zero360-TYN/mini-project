@@ -3,22 +3,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="~/images/sample.jpg" />
     <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/images/logo.png" />
     <!--CSS-->
     <link rel="stylesheet" href="~/css/settings/_variables.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/base/_reset.css" asp-append-version="true">
     <link rel="stylesheet" href="~/css/layout/_layout.css" asp-append-version="true">
+    <!--components-->
     <link rel="stylesheet" href="~/css/components/_button.css" asp-append-version="true">
-
-    <!--Import View file code to header -->
+    <link rel="stylesheet" href="~/css/components/_avatar.css" asp-append-version="true" />
+    <!--Import View file/CSS code to header -->
     @RenderSection("head", required: false)
 </head>
 <body>
     <header class="app-nav">
-        <div class="container app-nav__inner">
-            <a class ="app-nav__brand">Website name</a>
-            <a class="app-nav__link" asp-controller="Home" asp-action="Index">HOME</a>
+        <div class="app-nav__inner">
+            <!--left-->
+            <div class="app-nav__group">
+                <img class="app-nav__logo" src="~/images/logo.png" alt="Logo">
+                <span class="app-nav__brand">67 Food</span>                
+                <a class="app-nav__link" href="#">HOME</a>
+                <a class="app-nav__link" href="#">ABOUT</a>
+            </div>
+            <!--right-->
+            <div class="app-nav__group">
+                <a class="app-nav__link" href="#">CART</a>
+                <a class="app-nav__link" href="#">MY ORDER</a>
+                <img src="/images/user/user.png" alt="User Avatar" class="avatar" />
+            </div>
+
         </div>
     </header>
 
@@ -29,7 +42,7 @@
     </main>
 
     <footer class="app-footer">
-        <div class="container app-footer__inner">
+        <div class="app-footer__inner">
             <p>Copyrighted &copy; @DateTime.Today.Year</p>
             <a class="app-footer__link" href="#">Privacy Policy</a>
             <a class="app-footer__link" href="#">Terms of Service</a>
