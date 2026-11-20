@@ -3,25 +3,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="~/images/sample.jpg" />
     <title>@ViewBag.Title</title>
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <!--CSS-->
-    <link rel="stylesheet" href="/css/app.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/settings/_variables.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/base/_reset.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/layout/_layout.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/components/_button.css" asp-append-version="true">
+
     <!--Import View file code to header -->
     @RenderSection("head", required: false)
 </head>
 <body>
-    <header>
+    <header class="app-nav">
+        <div class="container app-nav__inner">
+            <a class ="app-nav__brand">Website name</a>
+            <a class="app-nav__link" asp-controller="Home" asp-action="Index">HOME</a>
+        </div>
     </header>
 
-    <main>
-        <h1>@ViewBag.Title</h1>
-        @RenderBody()
+    <main class="page-main">
+        <div class="container">
+            @RenderBody()
+        </div>
     </main>
 
-    <footer>
-        Copyrighted &copy; @DateTime.Today.Year
+    <footer class="app-footer">
+        <div class="container app-footer__inner">
+            <p>Copyrighted &copy; @DateTime.Today.Year</p>
+            <a class="app-footer__link" href="#">Privacy Policy</a>
+            <a class="app-footer__link" href="#">Terms of Service</a>
+        </div>
     </footer>
     <!--Js Lib-->
     <script src="~/jsLib/jquery.min.js"></script>

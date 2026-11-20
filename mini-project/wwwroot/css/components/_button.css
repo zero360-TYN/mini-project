@@ -1,0 +1,30 @@
+﻿@layer components {
+    .btn {
+        display: inline-block;
+        padding: var(--space-2) var(--space-3);
+        border: 1px solid transparent;
+        border-radius: var(--radius-md);
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        line-height: 1.4;
+    }        
+        .btn:hover {
+            background: var(--white-1);
+            color: var(--text-strong);
+        }
+    /*default button*/
+    .btn--primary {
+        background: var(--purple-600);
+        border-color: var(--purple-600);
+        color: var(--text-inverse);
+    }
+
+    /*button that try to get user attention*/
+    .btn--accent {
+        background: var(--yellow-400);
+        border-color: var(--yellow-400);
+        color: var(--purple-900);
+    }
+
+}
