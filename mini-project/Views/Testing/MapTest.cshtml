@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "地图基础测试";
+}
+
+<div class="container">
+    <h4>第一步：空白基础地图测试</h4>
+    <!-- 必须给地图容器设定明确的高度，否则地图高度为 0 会显示一片空白 -->
+    <div id="map" style="height: 500px; width: 100%; border: 1px solid #ccc;"></div>
+</div>
+
+<!-- 1. 加载 Google Maps JS 脚本 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=@ViewBag.ApiKey&callback=initMap" async defer></script>
+
+<!-- 2. 初始化地图 -->
+<script>
+    function initMap() {
+        // 设置初始中心点（这里以吉隆坡市中心为例）
+        const defaultCenter = { lat: 3.1390, lng: 101.6869 };
+
+        // 创建并渲染地图
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: defaultCenter,
+            zoom: 14 // 缩放级别：14 大约是街道/社区级别
+        });
+
+    }
+</script>
